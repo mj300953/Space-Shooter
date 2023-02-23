@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float shotPower;
+    [SerializeField] private float shotPower;
     
     private Rigidbody2D _rigidbody2D;
 
