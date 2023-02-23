@@ -1,18 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] private string sceneName;
+    [SerializeField] private Button loadLevelButton;
+    [SerializeField] private string levelName;
 
-    [ContextMenu(nameof(Test))]
-    private void Test()
+    private void Awake()
     {
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+        loadLevelButton.onClick.AddListener(LoadLevel);
     }
-    
-    private void Test2()
+
+    private void LoadLevel()
     {
-        SceneManager.UnloadSceneAsync(sceneName);
+        SceneManager.LoadScene(levelName);
     }
 }
+ 
