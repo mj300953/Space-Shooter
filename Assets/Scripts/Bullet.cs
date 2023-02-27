@@ -12,6 +12,11 @@ public class Bullet : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(gameObject);
+    }
+
     public void Shot()
     {
         _rigidbody2D.AddForce(shotPower * Vector2.up);
