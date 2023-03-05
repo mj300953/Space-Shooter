@@ -23,9 +23,6 @@ public class BoundariesSetter : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(_boxColliderWidth);
-        Debug.Log(_rightUpCameraCorner);
-        Debug.Log(_leftDownCameraCorner);
         GetSetupValues();
         SetupScale();
         SetupPositions();
