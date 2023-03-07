@@ -4,7 +4,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float shotPower;
-    [SerializeField] private Vector2 shotDirection;
     
     private Rigidbody2D _rigidbody2D;
 
@@ -20,7 +19,6 @@ public class Bullet : MonoBehaviour
 
     public void Shot()
     {
-        shotDirection = Vector2.ClampMagnitude(shotDirection, 1f);
-        _rigidbody2D.AddForce(shotPower * shotDirection);
+        _rigidbody2D.AddForce(shotPower * Vector2.up);
     }
 }
