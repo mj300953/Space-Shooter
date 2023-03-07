@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private Vector2 shotVector;
     [SerializeField] private float shotPower;
     
     private Rigidbody2D _rigidbody2D;
@@ -19,6 +20,6 @@ public class Bullet : MonoBehaviour
 
     public void Shot()
     {
-        _rigidbody2D.AddForce(shotPower * Vector2.up);
+        _rigidbody2D.AddForce(shotPower * shotVector);
     }
 }

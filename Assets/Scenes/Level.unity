@@ -409,7 +409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216981682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -4.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -446,6 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSoundEffect: {fileID: 216981691}
   maxHealth: 20
+  livesAmount: 2
 --- !u!95 &216981690
 Animator:
   serializedVersion: 5
@@ -1059,6 +1060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSoundEffect: {fileID: 850183594}
   maxHealth: 30
+  livesAmount: 1
 --- !u!114 &850183591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,6 +1454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSoundEffect: {fileID: 1284276945}
   maxHealth: 20
+  livesAmount: 1
 --- !u!61 &1284276943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1946,6 +1949,7 @@ MonoBehaviour:
   rightBoundary: {fileID: 1295633477}
   upperBoundary: {fileID: 962312678}
   lowerBoundary: {fileID: 62723191}
+  background: {fileID: 249563800}
 --- !u!1 &1969859908
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D _playerRigidbody;
     private BaseWeapon _weapon;
     private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
     
     private float _horizontalInput;
     private float _verticalInput;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
         _playerRigidbody = GetComponent<Rigidbody2D>();
         _weapon = GetComponent<BaseWeapon>();
         _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -50,7 +52,7 @@ public class Player : MonoBehaviour
 
     private void TryShooting()
     {
-        if (_gotShotInput)
+        if (_gotShotInput && _spriteRenderer.enabled)
         {
             _weapon.TryShooting();
         }

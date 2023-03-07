@@ -6,6 +6,7 @@ public class BoundariesSetter : MonoBehaviour
     [SerializeField] private Transform rightBoundary;
     [SerializeField] private Transform upperBoundary;
     [SerializeField] private Transform lowerBoundary;
+    [SerializeField] private Transform background;
 
     private Camera _camera;
     
@@ -22,10 +23,7 @@ public class BoundariesSetter : MonoBehaviour
     }
 
     private void Start()
-    {
-        Debug.Log(_boxColliderWidth);
-        Debug.Log(_rightUpCameraCorner);
-        Debug.Log(_leftDownCameraCorner);
+    { 
         GetSetupValues();
         SetupScale();
         SetupPositions();
@@ -45,6 +43,7 @@ public class BoundariesSetter : MonoBehaviour
         rightBoundary.localScale = new Vector3(BorderWidth, _boxColliderHeight, 0);
         lowerBoundary.localScale = new Vector3(_boxColliderWidth, BorderWidth, 0);
         upperBoundary.localScale = new Vector3(_boxColliderWidth, BorderWidth, 0);
+        background.localScale = new Vector3(_boxColliderWidth, _boxColliderWidth, 0);
     }
 
     private void SetupPositions()

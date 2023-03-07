@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3134437110901245620}
   - component: {fileID: 2781421044580810676}
   - component: {fileID: 8830718856754691408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.125, y: 0.375}
+    oldSize: {x: 0.1388889, y: 0.41666666}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891dac6f90003c8449c7aeda96dbe1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotVector: {x: 0, y: 1}
   shotPower: 750
 --- !u!114 &8830718856754691408
 MonoBehaviour:
