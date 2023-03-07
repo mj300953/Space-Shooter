@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Weapons;
@@ -17,13 +16,9 @@ public class BomberEnemy : MonoBehaviour
     {
         _weapon = GetComponent<BaseWeapon>();
         _entrancePosition = transform.position + entranceMoveVector;
-    }
-
-    private void Start()
-    {
         StartCoroutine(Interact());
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
