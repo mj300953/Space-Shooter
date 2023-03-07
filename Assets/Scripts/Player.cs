@@ -43,11 +43,14 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        Vector2 horizontalDirection = _horizontalInput * Vector2.right;
-        Vector2 verticalDirection = _verticalInput * Vector2.up;
-        Vector2 targetDirection = horizontalDirection + verticalDirection;
-        targetDirection = Vector2.ClampMagnitude(targetDirection, 1f);
-        _playerRigidbody.velocity = targetDirection * moveSpeed;
+        if (_spriteRenderer.enabled)
+        {
+            Vector2 horizontalDirection = _horizontalInput * Vector2.right;
+            Vector2 verticalDirection = _verticalInput * Vector2.up;
+            Vector2 targetDirection = horizontalDirection + verticalDirection;
+            targetDirection = Vector2.ClampMagnitude(targetDirection, 1f);
+            _playerRigidbody.velocity = targetDirection * moveSpeed;
+        }
     }
 
     private void TryShooting()
