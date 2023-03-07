@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     private float _horizontalInput;
     private float _verticalInput;
     private bool _gotShotInput;
-
+    
     private static readonly int SpeedHash = Animator.StringToHash("Speed");
     
     private void Awake()
