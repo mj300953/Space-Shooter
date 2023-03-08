@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3826768663733615388}
   - component: {fileID: 3826768663733615389}
   - component: {fileID: 3826768663733615384}
-  - component: {fileID: -3085014611463374582}
+  - component: {fileID: 8411643746310265476}
   - component: {fileID: 3826768663733615383}
   - component: {fileID: 3826768663733615385}
   m_Layer: 7
@@ -147,7 +147,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!82 &-3085014611463374582
+--- !u!82 &8411643746310265476
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

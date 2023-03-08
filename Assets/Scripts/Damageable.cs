@@ -4,6 +4,7 @@ using UnityEngine;
 public class Damageable : MonoBehaviour
 {
     [SerializeField] private AudioSource hitSoundEffect;
+    [SerializeField] private AudioSource destroyedSoundEffect;
     [SerializeField] private int maxHealth;
     [SerializeField] private int livesAmount;
 
@@ -36,6 +37,7 @@ public class Damageable : MonoBehaviour
         
         if (_currentHealth <= 0)
         {
+            destroyedSoundEffect.Play();
             _spriteRenderer.enabled = false;
             _currentLife -= 1;
             gameObject.layer = _protectedLayer;
@@ -43,22 +45,24 @@ public class Damageable : MonoBehaviour
         
         if (_currentHealth <=0 && _currentLife > 0)
         {
-            StartCoroutine(Respawn(1f));
+            StartCoroutine(Respawn(0.5f, 1f));
         }
 
         if (_currentHealth <= 0 && _currentLife == 0)
         {
+            destroyedSoundEffect.Play();
             Destroy(gameObject);
         }
     }
 
-    private IEnumerator Respawn(float duration)
+    private IEnumerator Respawn(float spawnInterval, float damageableInterval)
     {
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(spawnInterval);
         _transform.position = _startPosition;
         _rigidbody.velocity = new Vector2(0, 0);
         _spriteRenderer.enabled = true;
-        yield return new WaitForSeconds(1f);
+        _currentHealth = maxHealth;
+        yield return new WaitForSeconds(damageableInterval);
         gameObject.layer = _defaultLayer;
     }
 }
