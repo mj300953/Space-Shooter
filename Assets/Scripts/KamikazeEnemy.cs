@@ -16,12 +16,4 @@ public class KamikazeEnemy : MonoBehaviour
 		targetDirection = Vector2.ClampMagnitude(targetDirection, 1f);
 		_rigidbody.velocity = moveSpeed * targetDirection;
 	}
-	
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.CompareTag("Player"))
-		{
-			Destroy(gameObject);
-		}
-	}
 }

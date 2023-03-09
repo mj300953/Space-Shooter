@@ -5,6 +5,9 @@ public class Damageable : MonoBehaviour
 {
     [SerializeField] private AudioSource hitSoundEffect;
     [SerializeField] private AudioSource destroyedSoundEffect;
+	[SerializeField] private Explosion explosionPrefab;
+	[SerializeField] private float damageableAfterDeathTime;
+	[SerializeField] private float spawnAfterDeathTime;
     [SerializeField] private int maxHealth;
     [SerializeField] private int livesAmount;
 
@@ -37,22 +40,24 @@ public class Damageable : MonoBehaviour
         
         if (_currentHealth <= 0)
         {
+			Instantiate(explosionPrefab, _transform.position, _transform.rotation);
             destroyedSoundEffect.Play();
             _spriteRenderer.enabled = false;
             _currentLife -= 1;
             gameObject.layer = _protectedLayer;
         }
-        
-        if (_currentHealth <=0 && _currentLife > 0)
-        {
-            StartCoroutine(Respawn(0.5f, 1f));
-        }
 
         if (_currentHealth <= 0 && _currentLife == 0)
         {
+			Instantiate(explosionPrefab, _transform.position, _transform.rotation);
             destroyedSoundEffect.Play();
             Destroy(gameObject);
         }
+
+		if (_currentHealth <=0 && _currentLife > 0)
+        {
+           	StartCoroutine(Respawn(spawnAfterDeathTime, damageableAfterDeathTime));
+       	}
     }
 
     private IEnumerator Respawn(float spawnInterval, float damageableInterval)

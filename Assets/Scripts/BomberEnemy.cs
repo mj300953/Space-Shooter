@@ -24,14 +24,6 @@ public class BomberEnemy : MonoBehaviour
         StartCoroutine(Interact());
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-    }
-
     private IEnumerator Interact()
     {
         yield return Move(_entrancePosition);
