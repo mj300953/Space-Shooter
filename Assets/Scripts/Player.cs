@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 using Weapons;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(BaseWeapon))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
@@ -11,13 +14,15 @@ public class Player : MonoBehaviour
     private BaseWeapon _weapon;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
+    private GameObject _gameObject;
     
     private float _horizontalInput;
     private float _verticalInput;
+    private int _powerUpCounter;
     private bool _gotShotInput;
     
     private static readonly int SpeedHash = Animator.StringToHash("Speed");
-    
+
     private void Awake()
     {
         _playerRigidbody = GetComponent<Rigidbody2D>();
@@ -32,6 +37,15 @@ public class Player : MonoBehaviour
         GetInput();
         Move();
         TryShooting();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("PowerUp"))
+        {
+            _powerUpCounter++;
+            Debug.Log(_powerUpCounter);
+        }
     }
 
     private void GetInput()

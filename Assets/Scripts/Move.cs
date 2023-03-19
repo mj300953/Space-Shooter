@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class KamikazeEnemy : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D))]
+public class Move : MonoBehaviour
 {
 	[SerializeField] private float moveSpeed;
 	[SerializeField] private Vector2 targetDirection;

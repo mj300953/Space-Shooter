@@ -7,6 +7,8 @@ public class BoundariesSetter : MonoBehaviour
     [SerializeField] private Transform upperBoundary;
     [SerializeField] private Transform lowerBoundary;
     [SerializeField] private Transform background;
+    [SerializeField] private Transform respawnPosition;
+    [SerializeField] private Transform playerPosition;
 
     private Camera _camera;
     
@@ -16,6 +18,7 @@ public class BoundariesSetter : MonoBehaviour
     private float _boxColliderWidth;
     
     private const float BorderWidth = 1f;
+    private const float RespawnPosition = 1f;
     
     private void Awake()
     {
@@ -52,5 +55,7 @@ public class BoundariesSetter : MonoBehaviour
         lowerBoundary.position = new Vector3(0, _leftDownCameraCorner.y - BorderWidth / 2, 0);
         rightBoundary.position = new Vector3(_rightUpCameraCorner.x + BorderWidth / 2, 0, 0);
         upperBoundary.position = new Vector3(0, _rightUpCameraCorner.y + BorderWidth / 2, 0);
+        respawnPosition.position = new Vector3(0, _leftDownCameraCorner.y + RespawnPosition, 0);
+        playerPosition.position = new Vector3(0, _leftDownCameraCorner.y + RespawnPosition, 0);
     }
 }

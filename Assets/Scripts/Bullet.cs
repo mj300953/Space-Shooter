@@ -7,12 +7,10 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float shotPower;
     
     private Rigidbody2D _rigidbody2D;
-	private Animator _animator;
 
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

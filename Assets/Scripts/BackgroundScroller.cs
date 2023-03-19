@@ -16,7 +16,7 @@ public class BackgroundScroller : MonoBehaviour
     
     private void Update()
     {
-        transform.Translate(Vector3.down * scrollSpeed * Time.deltaTime);
+        _transform.Translate(Vector3.down * scrollSpeed * Time.deltaTime);
         if (_transform.position.y < loopPosition)
         {
             _transform.position = _startPosition;

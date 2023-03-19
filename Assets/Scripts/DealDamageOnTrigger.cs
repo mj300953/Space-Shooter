@@ -5,7 +5,7 @@ public class DealDamageOnTrigger : MonoBehaviour
     [SerializeField] private string damageableTag;
     [SerializeField] private int damageAmount;
 
-    private Damageable _damageable;
+    private Damageables.Damageable _damageable;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
