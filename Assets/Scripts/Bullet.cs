@@ -7,15 +7,22 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float shotPower;
     
     private Rigidbody2D _rigidbody2D;
+	private SpriteRenderer _spriteRenderer;
+
+	private int _protectedLayer;
 
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _protectedLayer = LayerMask.NameToLayer("Protected");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+		_spriteRenderer.enabled = false;
+		gameObject.layer = _protectedLayer;
+        Destroy(gameObject, 0.2f);
     }
 
     public void Shot()

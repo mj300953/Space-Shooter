@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotVector: {x: 0, y: 1}
-  shotPower: 750
+  shotPower: 1000
 --- !u!114 &5045837508223762525
 MonoBehaviour:
   m_ObjectHideFlags: 0

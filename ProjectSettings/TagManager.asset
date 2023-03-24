@@ -7,6 +7,11 @@ TagManager:
   - Enemy
   - GameBoundaries
   - PowerUp
+  - Coin
+  - BigCoin
+  - AsteroidHit
+  - ShipDestroyed
+  - DamagedEnemy
   layers:
   - Default
   - TransparentFX
@@ -18,10 +23,10 @@ TagManager:
   - EnemyBullet
   - PlayerBullet
   - Protected
-  - 
-  - 
-  - 
-  - 
+  - Explosion
+  - Start
+  - Player
+  - Coin
   - 
   - 
   - 
