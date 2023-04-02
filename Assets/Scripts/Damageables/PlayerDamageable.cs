@@ -20,8 +20,6 @@ namespace Damageables
         private SpriteRenderer _spriteRenderer;
         private Transform _transform;
 
-		public bool Died = false;
-
         private int _protectedLayer;
         private int _defaultLayer;
         private int _currentLife;
@@ -47,7 +45,6 @@ namespace Damageables
         {
             if (CurrentHealth <= 0)
             {
-				Died = true;
                 Instantiate(explosionPrefab, _transform.position, _transform.rotation);
                 destroyedSoundEffect.Play();
                 _spriteRenderer.enabled = false;

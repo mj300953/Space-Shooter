@@ -24,7 +24,7 @@ public class HomingMissile : MonoBehaviour
       _protectedLayer = LayerMask.NameToLayer("Protected");
    }
 
-   private void FixedUpdate()
+   private void Update()
    {
       Vector2 targetDirection = (Vector2)_target.position - _rigidbody2D.position;
 

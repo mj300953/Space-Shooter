@@ -13,7 +13,7 @@ namespace Damageables
         private Transform _transform;
         private SpriteRenderer _spriteRenderer;
 
-        public int KilledEnemyCount;
+        public static int KilledEnemyCount { get; private set; }
 
         private int _protectedLayer;
         

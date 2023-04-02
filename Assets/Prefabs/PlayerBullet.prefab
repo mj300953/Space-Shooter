@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5045837508223762522}
   - component: {fileID: 5045837508223762523}
   - component: {fileID: 5045837508223762526}
-  - component: {fileID: 5045837508223762524}
   - component: {fileID: 5045837508223762525}
+  - component: {fileID: 7069418925487073164}
   m_Layer: 8
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -253,20 +253,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &5045837508223762524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5045837508223762527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891dac6f90003c8449c7aeda96dbe1aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotVector: {x: 0, y: 1}
-  shotPower: 1000
 --- !u!114 &5045837508223762525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,3 +267,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageableTag: Enemy
   damageAmount: 10
+--- !u!114 &7069418925487073164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5045837508223762527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0e29b8410a432794f9cd2539a1c8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotVector: {x: 0, y: 1}
+  shotPower: 1000

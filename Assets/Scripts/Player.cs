@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         _animator.SetFloat(SpeedHash, Mathf.Abs(_playerRigidbody2D.velocity.x) + Mathf.Abs((_playerRigidbody2D.velocity.y)));
-		canvas.SetActive(Time.time > EntryTime);
+		canvas.SetActive(Time.time > EntryTime && LevelFinish.PlayerLeaving != true);
         GetInput();
         Move();
         TryShooting();
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        if (_spriteRenderer.enabled && Time.time > EntryTime)
+        if (_spriteRenderer.enabled && Time.time > EntryTime && LevelFinish.PlayerLeaving != true)
         {
             Vector2 horizontalDirection = _horizontalInput * Vector2.right;
             Vector2 verticalDirection = _verticalInput * Vector2.up;
@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
 
     private void TryShooting()
     {
-        if (_gotShotInput && _spriteRenderer.enabled && Time.time > EntryTime)
+        if (_gotShotInput && _spriteRenderer.enabled && Time.time > EntryTime && LevelFinish.PlayerLeaving != true)
         {
             _weapon.TryShooting();
         }

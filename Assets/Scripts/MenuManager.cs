@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
     private void Awake()
     {
         loadLevelButton.onClick.AddListener(LoadLevel);
-        loadLevelButton.onClick.AddListener(QuitGame);
+        quitButton.onClick.AddListener(QuitGame);
     }
 
     private void LoadLevel()
@@ -22,6 +22,17 @@ public class MenuManager : MonoBehaviour
     private void QuitGame()
     {
         Application.Quit();
+        Debug.Log("Quit");
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+    }
+    
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
     }
 }
  

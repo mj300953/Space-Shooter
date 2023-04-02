@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78cb6109813764f4593d973484b9e6c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPower: 12
-  slowDownTime: 0.1
+  shotPower: 8
+  slowDownTime: 0.125
   slowDownValue: 5
   targetType: Player

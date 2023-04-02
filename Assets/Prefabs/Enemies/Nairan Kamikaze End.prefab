@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3811225554153978915
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 113936949100534473, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_Name
+      value: Nairan Kamikaze End
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698123842401713171, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258414929669375980, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: firstShot
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818758959076956256, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818758959076956256, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818758959076956256, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248623059530609724, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: pickupPrefab
+      value: 
+      objectReference: {fileID: 6046160918406324670, guid: 4268ddc17b23068488f297e3c173dd18, type: 3}
+    - target: {fileID: 7608777433763603470, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 97815c32274be3543a46ad8d6d701a63, type: 3}

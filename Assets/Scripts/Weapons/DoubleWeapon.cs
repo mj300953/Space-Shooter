@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Weapons
 {
@@ -6,7 +7,7 @@ namespace Weapons
     {
         [SerializeField] private Transform shotPoint1;
         [SerializeField] private Transform shotPoint2;
-        [SerializeField] private Bullet bulletPrefab;
+        [FormerlySerializedAs("bulletPrefab")] [SerializeField] private Bullets.Bullets bulletsPrefab;
 
         protected override void Shot()
         {
@@ -16,7 +17,7 @@ namespace Weapons
 
         private void Shot(Vector3 position)
         {
-            Bullet bullet2 = Instantiate(bulletPrefab, position, Quaternion.identity);
+            Bullets.Bullets bullet2 = Instantiate(bulletsPrefab, position, Quaternion.identity);
             bullet2.Shot();
         }
     }
